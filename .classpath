@@ -2,16 +2,13 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/postgresql-9.3-1101.jdbc41.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/commons-javaflow-20060411.jar"/>
 	<classpathentry kind="lib" path="lib/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="lib/core_ireport.jar"/>
 	<classpathentry kind="lib" path="lib/commons-beanutils-1.8.2.jar"/>
 	<classpathentry kind="lib" path="lib/commons-digester-2.1.jar"/>
 	<classpathentry kind="lib" path="lib/groovy-all-2.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/iText-2.1.7.js2.jar"/>
-	<classpathentry kind="lib" path="lib/projetocontrolefinanceiro-util-1.0.jar"/>
 	<classpathentry kind="lib" path="lib/jasperreports-6.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
