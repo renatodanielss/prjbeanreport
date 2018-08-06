@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.cts.model.Cliente;
+import br.com.cts.model.Teste;
 import br.com.cts.util.Report;
 
 public class Main {
@@ -18,6 +19,12 @@ public class Main {
 		List<Cliente> clientes = new ArrayList<>();
 		clientes.add(cliente1);
 		clientes.add(cliente2);
+		
+		Teste teste = new Teste();
+		teste.setNome("Teste 1");
+		
+		List<Teste> testes = new ArrayList<>();
+		testes.add(teste);
 		
 		Report<Cliente> report = new Report<Cliente>();
 		report.getReport(clientes, "reports/clientereport.jrxml");

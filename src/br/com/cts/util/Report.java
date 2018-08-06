@@ -1,5 +1,7 @@
 package br.com.cts.util;
 
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +13,11 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
 import net.sf.jasperreports.view.JasperViewer;
 
 public class Report<T> {
@@ -71,5 +77,16 @@ public class Report<T> {
 
 		JasperViewer viewer = new JasperViewer(jsPrint, false);
 		viewer.setVisible(true);
+		
+		OutputStream outputStream = new FileOutputStream("D:\\D\\Desktop\\arq.pdf");
+		
+		//exportar para pdf
+		JRPdfExporter exporter = new JRPdfExporter();
+		exporter.setExporterInput(new SimpleExporterInput(jsPrint));
+		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(outputStream));
+		SimplePdfExporterConfiguration configuration = new SimplePdfExporterConfiguration();
+		configuration.setMetadataAuthor("Daniel");;
+		exporter.setConfiguration(configuration);
+		exporter.exportReport();
 	}
 }
